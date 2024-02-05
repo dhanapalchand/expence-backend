@@ -3,7 +3,8 @@ const mongoose =require('mongoose')
 const app = express()
 const port = process.env.PORT||3000
 const Expence= require('./expence')
-
+const cors=require('cors')
+app.use(cors())
 
 mongoose.connect('mongodb+srv://dhanapalc:Dhanapal2020@cluster0.plctvbo.mongodb.net/demoDB?retryWrites=true&w=majority'),{
 // mongoose.connect('mongodb://127.0.0.1:27017/demoDB',{
